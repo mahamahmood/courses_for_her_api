@@ -5,17 +5,19 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.all
 
-    render json: @courses
+    render json: @courses.to_json(include: [:category, :users])
   end
 
   # GET /courses/1
   def show
-    render json: @course
+    render json: @course.to_json(include: [:category, :instructor, :users])
   end
 
   # POST /courses
   def create
     @course = Course.new(course_params)
+    # @course.category_id = params[:category_id]
+    # @course.instructor_id = params[:instructor_id]
 
     if @course.save
       render json: @course, status: :created, location: @course
