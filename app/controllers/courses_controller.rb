@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.all
 
-    render json: @courses.to_json(include: [:category, :users])
+    render json: @courses.to_json(include: [:category, :instructor, :users])
   end
 
   # GET /courses/1
