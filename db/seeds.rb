@@ -52,8 +52,8 @@ Course.create([
 ])
 
 User.create([
-    { first_name: 'maha', last_name: 'mahmood', username: 'maham', password_digest: '123' },
-    { first_name: 'test', last_name: 'test', username: 'test', password_digest: 'test' }
+    { first_name: 'test', last_name: 'test', username: 'test', password: 'test' },
+    { first_name: 'maha', last_name: 'mahmood', username: 'maha', password: 'maha' }
 ])
 
 Ledger.create([
