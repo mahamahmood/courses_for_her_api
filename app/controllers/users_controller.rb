@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_token, except: [:login, :create]
   before_action :authorize_user, except: [:login, :create, :index]
 
+  # Login /user
   def login
     user = User.find_by(username: params[:user][:username])
     if user && user.authenticate(params[:user][:password])
