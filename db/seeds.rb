@@ -63,4 +63,4 @@ Ledger.create([
     { user_id: 2, course_id: 9 },
     { user_id: 2, course_id: 5 },
     { user_id: 2, course_id: 12 }
-])``
+])
